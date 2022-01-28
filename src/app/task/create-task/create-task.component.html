@@ -1,0 +1,49 @@
+<div align="center">
+<h3>Create Task</h3>
+<div  [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    
+   <div align="left" class="form-group">
+
+      <label for="name">Task Id</label>
+
+      <input type="number" class="form-control" id="taskId" required [(ngModel)]="task.taskId" name="taskId">
+
+    </div>
+     <div align="left" class="form-group">
+      <label for="name">Owner Id</label>
+      <input type="number" class="form-control" id="ownerId" required [(ngModel)]="task.ownerId" name="ownerid">
+    </div>
+
+   
+<div align="left" class="form-group">
+   <label for="name">Task Name</label>
+   <input type="string" class="form-control" id="taskname" [(ngModel)]="task.taskName" name="taskname"  >
+</div>
+<div align="left" class="form-group">
+   <label for="name">Description</label>
+   <input type="string" class="form-control" id="description" [(ngModel)]="task.description"  name="description" >
+</div>
+<div align="left" class="form-group">
+   <label for="name">Status</label>
+   <input type="string" class="form-control" id="status" name="status" [(ngModel)]="task.status">
+</div>
+<div align="left" class="form-group">
+   <label for="name">Priority</label>
+   <input type="string" class="form-control" id="priority" name="priority" [(ngModel)]="task.priority">
+</div>
+ <div align="left" class="form-group">
+   <label for="name">Notes</label>
+   <input type="string" class="form-control" id="notes" name="notes" [(ngModel)]="task.notes">
+</div>
+
+<div align="left" class="form-group">
+   <label for="name">CreatorId</label>
+   <input type="number" class="form-control" id="creatorId" name="creatorId" [(ngModel)]="task.creatorId">
+</div>
+
+<br>
+<button  class="btn-btn-success">Submit</button>
+</form>
+</div>
+</div>
